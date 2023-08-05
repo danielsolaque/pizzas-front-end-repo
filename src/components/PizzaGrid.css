@@ -1,0 +1,41 @@
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Set the column layout to automatically fit the available width */
+    gap: 25px;
+}
+
+.pizza-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.pizza-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.pizza-grid p {
+    margin: 20px;
+    font-size: 25px;
+    color: rgb(200, 248, 203);
+}
+
+/* Error message styles */
+.error-message {
+    margin: 20px;
+    font-size: 20px;
+    color: #36a2f4;
+   
+}
+
+body {
+    background-color: #d32f2f;
+    margin: 0;
+}

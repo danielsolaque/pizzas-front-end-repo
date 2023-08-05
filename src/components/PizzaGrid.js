@@ -38,7 +38,7 @@ function PizzaGrid() {
     }
   }
 
-  // Rendering...
+  // Rendering....
   return (
     <div className="pizza-grid">
       {isLoading ? (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./PizzaGrid.css";
+import "./Layout.css";
 
 export function Layout({ isLoading, error, children }) {
   if (isLoading) {
@@ -10,5 +10,5 @@ export function Layout({ isLoading, error, children }) {
     return <p className="error-message">{error}</p>;
   }
 
-  return <div className="pizza-grid">{children}</div>;
+  return <div className="grid">{children}</div>;
 }

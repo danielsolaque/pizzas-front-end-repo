@@ -1,10 +1,11 @@
-.pizza-grid {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Set the column layout to automatically fit the available width */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Set the column layout to automatically fit the available width */
     gap: 25px;
 }
 
-.pizza-item {
+.item {
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
@@ -15,13 +16,13 @@
     border-radius: 10px;
 }
 
-.pizza-item img {
+.item img {
     max-width: 100%;
     height: auto;
 }
 
 
-.pizza-grid p {
+.grid p {
     margin: 20px;
     font-size: 25px;
     color: rgb(200, 248, 203);
@@ -32,7 +33,7 @@
     margin: 20px;
     font-size: 20px;
     color: #36a2f4;
-   
+
 }
 
 body {

@@ -1,4 +1,3 @@
-// Importing necessary components and styles
 import React, { useEffect, useState } from "react";
 import { Layout } from "./Layout";
 import "./Layout.css";
@@ -17,15 +16,15 @@ function PizzaGrid() {
       const response = await fetch("http://localhost:8000/items");
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        const body = await response.json();
+        throw new Error(body.error);
       }
 
       const data = await response.json();
       setPizzas(data.data);
       setIsLoading(false);
     } catch (error) {
-      console.error("Error fetching data:", error);
-      setError("Oops! Something went wrong... Please try later");
+      setError(error.message);
       setIsLoading(false);
     }
   }
@@ -40,7 +39,7 @@ function PizzaGrid() {
           <p>${pizza.price.toFixed(2)}</p>
           {pizza.toppings.length ? (
             <p>Toppings: {pizza.toppings.join(", ")}</p>
-          ) : ( null )}
+          ) : null}
         </div>
       ))}
     </Layout>

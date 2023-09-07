@@ -38,7 +38,9 @@ function PizzaGrid() {
           <h2>{pizza.name}</h2>
           <p>{pizza.shortDescription}</p>
           <p>${pizza.price.toFixed(2)}</p>
-          <p>Toppings: {pizza.toppings.join(", ")}</p>
+          {pizza.toppings.length ? (
+            <p>Toppings: {pizza.toppings.join(", ")}</p>
+          ) : ( null )}
         </div>
       ))}
     </Layout>

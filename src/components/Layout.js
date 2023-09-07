@@ -10,5 +10,9 @@ export function Layout({ isLoading, error, children }) {
     return <p className="error-message">{error}</p>;
   }
 
-  return <div className="grid">{children}</div>;
+  return (
+    <div className="wrapper">
+      <div className="grid">{children}</div>
+    </div>
+  );
 }
